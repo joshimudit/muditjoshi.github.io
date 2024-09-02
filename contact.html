@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mudit Joshi</title>
+    <link rel="icon" href="Home_img/site-logo.png" type="image/png"> <!-- Site logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic CSS Reset */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #e2e0e0;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav {
+            background-color: #716e6e;
+            padding: 10px;
+            position: relative;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #fff;
+            transition: color 0.3s, font-weight 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.current {
+            color: #ff9800;
+            font-weight: bold;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            gap: 15px;
+            flex-direction: column;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #716e6e;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #5a4e4e;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: auto;
+            padding: 20px 0;
+            background-color: #716e6e;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-form, .contact-info {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #716e6e;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                z-index: 1000;
+            }
+
+            .hamburger-menu {
+                display: none; /* Removed for this example */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="current">Contact</a></li>
+            <li><a href="#" id="theme-toggle"><span>&#9733;</span></a></li> <!-- Star symbol for dark mode -->
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Contact Mudit Joshi</h1>
+    </header>
+
+    <section class="contact-form">
+        <h2>Contact Form</h2>
+        <form action="mailto:muditj222@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Personal Email:</strong> muditj222@gmail.com</p>
+        <p><strong>Institute Email:</strong> mudit.sushi@stu.uni-kiel.de</p>
+        <p><strong>Phone Numbers:</strong> +91-8171647777, +4917636968111</p>
+        <p><strong>Address:</strong> Bremerstrasse 23, 24118 Kiel, Germany</p>
+        <!-- Map can be embedded here if relevant -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mudit Joshi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
