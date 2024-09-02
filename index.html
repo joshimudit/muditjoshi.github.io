@@ -101,8 +101,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 50px 20px; /* Adjusted padding for balanced space */
-            margin-top: 50px; /* Margin to push header down from top */
+            padding: 30px 20px; /* Reduced padding to bring header closer */
+            margin-top: 20px; /* Reduced margin to bring header closer */
             gap: 15px; /* Space between photo and text */
             flex-direction: column; /* Stack vertically on smaller screens */
         }
@@ -129,7 +129,7 @@
         }
 
         section {
-            margin: 50px auto;
+            margin: 20px auto;
             padding: 0 20px;
             max-width: 1000px; /* Limit the width of the section */
             text-align: justify; /* Justify text alignment */
@@ -144,7 +144,7 @@
 
         /* Social Links */
         #connect-me {
-            margin-top: 50px;
+            margin: 0; /* Removed margin to shift it up */
             text-align: center;
         }
 
@@ -152,7 +152,6 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 20px;
         }
 
         .social-links a img {
@@ -253,13 +252,7 @@
         </div>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I'm Mudit Joshi, I'm a dynamic system scientist with a strong background in simulation modeling, statistical analysis, and data science. Skilled in developing and applying quantitative methods to complex problems in biological systems. Proven track record in leading impactful projects at Kiel University, ETH Zurich, SEA-EU, and in India. Adept in utilizing advanced statistical tools, Bayesian frameworks, and programming languages to inform scientific decisions. Passionate about leveraging previous expertise and international experience to now drive advancements in pharmaceutical modeling and contribute to global healthcare solutions.</p>
-    </section>
-
     <section id="connect-me">
-        <h2>Connect with me:</h2>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/yourprofile"><img src="Home_img/linkedin-icon.png" alt="LinkedIn"></a>
             <a href="https://github.com/joshimudit"><img src="Home_img/github-icon.png" alt="GitHub"></a>
@@ -269,5 +262,14 @@
         </div>
     </section>
 
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I'm Mudit Joshi, I'm a dynamic system scientist with a strong background in simulation modeling, statistical analysis, and data science. Skilled in developing and applying quantitative methods to complex problems in biological systems. Proven track record in leading impactful projects at Kiel University, ETH Zurich, SEA-EU, and in India. Adept in utilizing advanced statistical tools, Bayesian frameworks, and programming languages to inform scientific decisions. Passionate about leveraging previous expertise and international experience to now drive advancements in pharmaceutical modeling and contribute to global healthcare solutions.</p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Mudit Joshi. All Rights Reserved.</
+        <p>&copy; 2024 Mudit Joshi. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
