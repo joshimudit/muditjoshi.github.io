@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mudit Joshi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Home_img/site-logo.png" type="image/png"> <!-- Site logo for the browser tab -->
     <style>
         /* Basic CSS Reset */
         body, h1, h2, p {
@@ -59,6 +60,12 @@
             font-weight: bold;
         }
 
+        .theme-toggle {
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #fff;
+        }
+
         .hamburger-menu {
             display: none;
             font-size: 2em;
@@ -90,8 +97,8 @@
 
         .profile-photo {
             border-radius: 50%;
-            width: 350px; /* Adjusted size for better fit */
-            height: 350px; /* Adjusted size for better fit */
+            width: 350px; /* Updated size for all screens */
+            height: 350px; /* Updated size for all screens */
             object-fit: cover; /* Ensure the image fits well */
         }
 
@@ -145,15 +152,24 @@
             filter: brightness(0.8);
         }
 
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+
+        .dark-mode nav {
+            background-color: #979797;
+        }
+
+        .dark-mode .profile-photo {
+            border: 5px solid #fff;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header {
                 flex-direction: column; /* Stack vertically on smaller screens */
-            }
-
-            .profile-photo {
-                width: 250px; /* Smaller photo size */
-                height: 250px; /* Smaller photo size */
             }
 
             .intro-text h1 {
@@ -167,7 +183,7 @@
 
         @media (max-width: 480px) {
             nav ul {
-                display: none; /* Hide the navigation links by default */
+                display: flex; /* Show navigation links by default on mobile */
                 flex-direction: column;
                 width: 100%;
                 background-color: #716e6e;
@@ -183,14 +199,7 @@
             }
 
             .hamburger-menu {
-                display: block;
-                position: absolute;
-                top: 10px;
-                right: 20px;
-            }
-
-            nav ul.show {
-                display: flex; /* Show navigation links when menu is open */
+                display: none; /* Hide the menu button on mobile */
             }
 
             header {
@@ -198,8 +207,8 @@
             }
 
             .profile-photo {
-                width: 150px; /* Even smaller photo size */
-                height: 150px; /* Even smaller photo size */
+                width: 350px; /* Consistent size on all screens */
+                height: 350px; /* Consistent size on all screens */
             }
 
             .intro-text h1 {
@@ -214,7 +223,6 @@
 </head>
 <body>
     <nav>
-        <div class="hamburger-menu" id="hamburger-menu">&#9776;</div>
         <ul class="nav-links">
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="education.html">Education</a></li>
@@ -223,6 +231,7 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="sec1.html">Sec1</a></li>
             <li><a href="sec2.html">Sec2</a></li>
+            <li><a href="#" id="theme-toggle" class="theme-toggle">&#9790;</a></li> <!-- Moon icon for dark mode -->
         </ul>
     </nav>
 
@@ -255,13 +264,5 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const hamburgerMenu = document.getElementById('hamburger-menu');
-            const navLinks = document.querySelector('.nav-links');
-            
-            hamburgerMenu.addEventListener('click', () => {
-                navLinks.classList.toggle('show');
-            });
-        });
-    </script>
-</body>
-</html>
+            const toggle = document.getElementById('theme-toggle');
+            const prefersDarkScheme = window.matchMedia("(pref
