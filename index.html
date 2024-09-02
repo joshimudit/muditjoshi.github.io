@@ -64,6 +64,9 @@
             font-size: 1.5em;
             cursor: pointer;
             color: #fff;
+            background: none;
+            border: none;
+            outline: none;
         }
 
         .dark-mode {
@@ -85,15 +88,15 @@
             justify-content: center;
             text-align: center;
             padding: 50px 20px;
-            margin-top: 30px; /* Reduced margin to fit better */
+            margin-top: 30px;
             gap: 15px;
             flex-direction: column;
         }
 
         .profile-photo {
             border-radius: 50%;
-            width: 350px; /* Adjusted size */
-            height: 350px; /* Adjusted size */
+            width: 350px;
+            height: 350px;
             object-fit: cover;
         }
 
@@ -128,13 +131,13 @@
         /* Social Links */
         #connect-me {
             text-align: center;
+            margin-top: 20px;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 20px;
         }
 
         .social-links a img {
@@ -179,8 +182,18 @@
                 z-index: 1000;
             }
 
+            nav ul.show {
+                display: flex; /* Show navigation links when menu is open */
+            }
+
             .hamburger-menu {
-                display: none; /* Removed for this example */
+                display: block;
+                font-size: 1.5em;
+                color: #fff;
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                right: 20px;
             }
 
             header {
@@ -204,15 +217,14 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="hamburger-menu" id="hamburger-menu">&#9776;</div> <!-- Hamburger menu icon -->
+        <ul id="nav-links">
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="sec1.html">Sec1</a></li>
-            <li><a href="sec2.html">Sec2</a></li>
-            <li><a href="#" id="theme-toggle"><span>&#x263C;</span></a></li> <!-- Sun symbol for light mode -->
+            <li><button id="theme-toggle"><span>&#9790;</span></button></li> <!-- Moon symbol for dark mode -->
         </ul>
     </nav>
 
@@ -224,11 +236,6 @@
         </div>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I'm Mudit Joshi, I'm a dynamic system scientist with a strong background in simulation modeling, statistical analysis, and data science. Skilled in developing and applying quantitative methods to complex problems in biological systems. Proven track record in leading impactful projects at Kiel University, ETH Zurich, SEA-EU, and in India. Adept in utilizing advanced statistical tools, Bayesian frameworks, and programming languages to inform scientific decisions. Passionate about leveraging previous expertise and international experience to now drive advancements in pharmaceutical modeling and contribute to global healthcare solutions.</p>
-    </section>
-
     <section id="connect-me">
         <div class="social-links">
             <a href="https://www.linkedin.com/in/yourprofile"><img src="Home_img/linkedin-icon.png" alt="LinkedIn"></a>
@@ -237,6 +244,11 @@
             <a href="https://www.instagram.com/yourprofile"><img src="Home_img/instagram-icon.png" alt="Instagram"></a>
             <a href="https://www.university.com"><img src="Home_img/university-icon.png" alt="University"></a>
         </div>
+    </section>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I'm Mudit Joshi, I'm a dynamic system scientist with a strong background in simulation modeling, statistical analysis, and data science. Skilled in developing and applying quantitative methods to complex problems in biological systems. Proven track record in leading impactful projects at Kiel University, ETH Zurich, SEA-EU, and in India. Adept in utilizing advanced statistical tools, Bayesian frameworks, and programming languages to inform scientific decisions. Passionate about leveraging previous expertise and international experience to now drive advancements in pharmaceutical modeling and contribute to global healthcare solutions.</p>
     </section>
 
     <footer>
@@ -264,6 +276,13 @@
             } else {
                 setTheme(prefersDarkScheme.matches);
             }
+
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
         });
     </script>
 </body>
