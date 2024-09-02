@@ -17,57 +17,57 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
-            padding: 20px;
+            background-color: #e2e0e0;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             transition: background-color 0.3s, color 0.3s;
         }
 
         header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            padding: 50px 0;
-            text-align: left;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px; /* Increased padding for more space */
+            margin-top: 50px; /* Margin to push header down from top */
         }
 
         .profile-photo {
             border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            margin-right: 20px;
+            width: 250px; /* Increased size */
+            height: 250px; /* Increased size */
+            margin-bottom: 20px; /* Space between photo and text */
         }
 
         .intro-text h1 {
-            font-size: 2.5em;
+            font-size: 4em; /* Increased size */
             margin-bottom: 10px;
         }
 
         .intro-text p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.2em;
+            font-size: 1.5em; /* Increased size */
+            /*color: #555;*/
         }
 
         section {
             margin-top: 50px;
+            text-align: center; /* Center-align text */
         }
 
         footer {
             text-align: center;
-            margin-top: 50px;
             font-size: 0.9em;
+            margin-top: auto; /* Push footer to the bottom */
+            padding: 20px 0; /* Space around footer text */
         }
 
         /* Navigation bar styling */
         nav {
-            background-color: #333;
+            background-color: #716e6e;
             padding: 10px;
         }
 
@@ -108,7 +108,7 @@
         }
 
         .dark-mode nav {
-            background-color: #222;
+            background-color: #979797;
         }
 
         .dark-mode .profile-photo {
@@ -161,7 +161,8 @@
 
     <section>
         <h2>About Me</h2>
-        <p>Hello! I'm Mudit Joshi, and this is my portfolio. Here you'll find details about my education, projects, and how to contact me.</p>
+        <p>Hello! I'm Mudit Joshi, I'm a dynamic system scientist with a strong background in simulation modeling, statistical analysis, and data science. Skilled in developing and applying quantitative methods to complex problems in biological systems. Proven track record in leading impactful projects at Kiel University, ETH Zurich, SEA-EU, and in India. Adept in utilizing advanced statistical tools, Bayesian frameworks, and programming languages to
+            inform scientific decisions. Passionate about leveraging previous expertise and international experience to now drive advancements in pharmaceutical modeling and contribute to global healthcare solutions.</p>
     </section>
 
     <section id="connect-me">
@@ -169,10 +170,9 @@
         <div class="social-links">
             <a href="https://www.linkedin.com/in/yourprofile"><img src="Home_img/linkedin-icon.png" alt="LinkedIn"></a>
             <a href="https://github.com/joshimudit"><img src="Home_img/github-icon.png" alt="GitHub"></a>
-            <a href="https://www.university.com"><img src="Home_img/university-icon.png" alt="University"></a>
             <a href="mailto:your.email@example.com"><img src="Home_img/email-icon.png" alt="Email"></a>
             <a href="https://www.instagram.com/yourprofile"><img src="Home_img/instagram-icon.png" alt="Instagram"></a>
-            <a href="https://www.twitter.com"><img src="Home_img/twitter-icon.png" alt="twitter"></a>
+            <a href="https://www.university.com"><img src="Home_img/university-icon.png" alt="University"></a>
         </div>
     </section>
 
