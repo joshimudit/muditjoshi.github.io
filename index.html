@@ -77,25 +77,6 @@
             display: none;
         }
 
-        #theme-toggle {
-            font-size: 1.5em;
-            cursor: pointer;
-            color: #fff;
-        }
-
-        .dark-mode {
-            background-color: #333;
-            color: #f4f4f4;
-        }
-
-        .dark-mode nav {
-            background-color: #979797;
-        }
-
-        .dark-mode .profile-photo {
-            border: 5px solid #fff;
-        }
-
         header {
             display: flex;
             align-items: center;
@@ -240,7 +221,8 @@
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#" id="theme-toggle"><span>&#x263C;</span></a></li> <!-- Sun symbol for light mode -->
+            <li><a href="sec1.html">Sec1</a></li>
+            <li><a href="sec2.html">Sec2</a></li>
         </ul>
     </nav>
 
@@ -273,3 +255,13 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburgerMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
