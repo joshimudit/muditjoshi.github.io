@@ -231,7 +231,7 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="sec1.html">Sec1</a></li>
             <li><a href="sec2.html">Sec2</a></li>
-            <li><a href="#" id="theme-toggle" class="theme-toggle">&#9790;</a></li> <!-- Moon icon for dark mode -->
+            <li><a href="#" id="theme-toggle" class="theme-toggle">&#9790;</a> <!-- Moon icon for dark mode -->
         </ul>
     </nav>
 
@@ -265,4 +265,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const toggle = document.getElementById('theme-toggle');
-            const prefersDarkScheme = window.matchMedia("(pref
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+            function setTheme(isDark) {
+                document.body.class
