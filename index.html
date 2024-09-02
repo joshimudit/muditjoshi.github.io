@@ -28,29 +28,32 @@
 
         header {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 100px 20px; /* Increased padding for more space */
+            padding: 50px 20px; /* Adjusted padding for balanced space */
             margin-top: 50px; /* Margin to push header down from top */
+            gap: 20px; /* Space between photo and text */
         }
 
         .profile-photo {
             border-radius: 50%;
-            width: 250px; /* Increased size */
-            height: 250px; /* Increased size */
-            margin-bottom: 20px; /* Space between photo and text */
+            width: 250px; /* Size of the photo */
+            height: 250px; /* Size of the photo */
+            object-fit: cover; /* Ensure the image fits well */
+        }
+
+        .intro-text {
+            max-width: 600px; /* Limit text width for readability */
         }
 
         .intro-text h1 {
-            font-size: 4em; /* Increased size */
+            font-size: 4em; /* Size of the name */
             margin-bottom: 10px;
         }
 
         .intro-text p {
-            font-size: 1.5em; /* Increased size */
-            /*color: #555;*/
+            font-size: 1.5em; /* Size of the description */
         }
 
         section {
@@ -155,14 +158,13 @@
         <img src="Home_img/your-photo.jpg" alt="Mudit Joshi" class="profile-photo">
         <div class="intro-text">
             <h1>Mudit Joshi</h1>
-            <p>Data Scientist | Python Enthusiast | R Programmer</p>
+            <p>Data Scientist | Eco-informatitian | Ecologist</p>
         </div>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <p>Hello! I'm Mudit Joshi, I'm a dynamic system scientist with a strong background in simulation modeling, statistical analysis, and data science. Skilled in developing and applying quantitative methods to complex problems in biological systems. Proven track record in leading impactful projects at Kiel University, ETH Zurich, SEA-EU, and in India. Adept in utilizing advanced statistical tools, Bayesian frameworks, and programming languages to
-            inform scientific decisions. Passionate about leveraging previous expertise and international experience to now drive advancements in pharmaceutical modeling and contribute to global healthcare solutions.</p>
+        <p>Hello! I'm Mudit Joshi, I'm a dynamic system scientist with a strong background in simulation modeling, statistical analysis, and data science. Skilled in developing and applying quantitative methods to complex problems in biological systems. Proven track record in leading impactful projects at Kiel University, ETH Zurich, SEA-EU, and in India. Adept in utilizing advanced statistical tools, Bayesian frameworks, and programming languages to inform scientific decisions. Passionate about leveraging previous expertise and international experience to now drive advancements in pharmaceutical modeling and contribute to global healthcare solutions.</p>
     </section>
 
     <section id="connect-me">
