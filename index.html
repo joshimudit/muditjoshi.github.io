@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mudit Joshi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <style>
         /* Basic CSS Reset */
         body, h1, h2, p {
@@ -29,6 +28,7 @@
         nav {
             background-color: #716e6e;
             padding: 10px;
+            position: relative;
         }
 
         nav ul {
@@ -36,6 +36,9 @@
             padding: 0;
             margin: 0;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
         }
 
         nav ul li {
@@ -54,6 +57,24 @@
         nav ul li a.current {
             color: #ff9800;
             font-weight: bold;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .nav-links.hidden {
+            display: none;
         }
 
         #theme-toggle {
@@ -82,14 +103,14 @@
             text-align: center;
             padding: 50px 20px; /* Adjusted padding for balanced space */
             margin-top: 50px; /* Margin to push header down from top */
-            gap: 20px; /* Space between photo and text */
+            gap: 15px; /* Space between photo and text */
             flex-direction: column; /* Stack vertically on smaller screens */
         }
 
         .profile-photo {
             border-radius: 50%;
-            width: 250px; /* Adjusted size for better fit */
-            height: 250px; /* Adjusted size for better fit */
+            width: 350px; /* Adjusted size for better fit */
+            height: 350px; /* Adjusted size for better fit */
             object-fit: cover; /* Ensure the image fits well */
         }
 
@@ -99,7 +120,7 @@
         }
 
         .intro-text h1 {
-            font-size: 3em; /* Adjusted size for better fit */
+            font-size: 2.5em; /* Adjusted size for better fit */
             margin-bottom: 10px;
         }
 
@@ -110,7 +131,7 @@
         section {
             margin: 50px auto;
             padding: 0 20px;
-            max-width: 800px; /* Limit the width of the section */
+            max-width: 1000px; /* Limit the width of the section */
             text-align: justify; /* Justify text alignment */
         }
 
@@ -151,8 +172,8 @@
             }
 
             .profile-photo {
-                width: 200px; /* Smaller photo size */
-                height: 200px; /* Smaller photo size */
+                width: 250px; /* Smaller photo size */
+                height: 250px; /* Smaller photo size */
             }
 
             .intro-text h1 {
@@ -165,9 +186,31 @@
         }
 
         @media (max-width: 480px) {
+            nav ul {
+                display: none; /* Hide the navigation links by default */
+                flex-direction: column;
+                width: 100%;
+                background-color: #716e6e;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                z-index: 1000;
+            }
+
             nav ul li {
                 display: block;
                 margin: 10px 0;
+            }
+
+            .hamburger-menu {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+            }
+
+            nav ul.show {
+                display: flex; /* Show navigation links when menu is open */
             }
 
             header {
@@ -191,7 +234,8 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="hamburger-menu" id="hamburger-menu">&#9776;</div>
+        <ul class="nav-links">
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="projects.html">Projects</a></li>
@@ -226,31 +270,4 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Mudit Joshi. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggle = document.getElementById('theme-toggle');
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-            function setTheme(isDark) {
-                document.body.classList.toggle('dark-mode', isDark);
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            }
-
-            toggle.addEventListener('click', () => {
-                const isDark = document.body.classList.contains('dark-mode');
-                setTheme(!isDark);
-            });
-
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                setTheme(savedTheme === 'dark');
-            } else {
-                setTheme(prefersDarkScheme.matches);
-            }
-        });
-    </script>
-</body>
-</html>
+        <p>&copy; 2024 Mudit Joshi. All Rights Reserved.</
