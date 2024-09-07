@@ -92,15 +92,19 @@
 
         /* Vertical Project Cards */
         .project-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            transition: transform 0.3s;
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .project-card:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
         }
 
         .project-card img {
@@ -108,10 +112,11 @@
             height: 200px;
             object-fit: cover;
             flex-shrink: 0;
+            border-radius: 8px;
         }
 
         .project-info {
-            padding: 20px;
+            padding-left: 20px;
             flex-grow: 1;
         }
 
@@ -179,6 +184,10 @@
                 width: 100%;
                 height: auto;
             }
+
+            .project-info {
+                padding-left: 0;
+            }
         }
     </style>
 </head>
@@ -200,34 +209,34 @@
 
         <!-- Project 1 -->
         <div class="project-card">
-            <img src="Projects/project1/project1.jpg" alt="Project 1 Thumbnail">
+            <img src="Projects/project1.jpg" alt="Project 1 Thumbnail">
             <div class="project-info">
                 <h3>Project 1</h3>
                 <p>Time: 2024</p>
                 <p>This is project 1This is project 1This is project 1This is project 1This is project 1This is project 1</p>
-                <a href="Projects/project1/project1.html">Read More</a>
+                <a href="project1.html">Read More</a>
             </div>
         </div>
 
         <!-- Project 2 -->
         <div class="project-card">
-            <img src="Projects/project2/project2.jpg" alt="Project 2 Thumbnail">
+            <img src="Projects/project2.jpg" alt="Project 2 Thumbnail">
             <div class="project-info">
                 <h3>Project 2</h3>
                 <p>Time: 2023</p>
                 <p>This is project 2This is project 2This is project 2This is project 2This is project 2This is project 2</p>
-                <a href="Projects/project2/project2.html">Read More</a>
+                <a href="project2.html">Read More</a>
             </div>
         </div>
 
         <!-- Project 3 -->
         <div class="project-card">
-            <img src="Projects/project3/project3.jpg" alt="Project 3 Thumbnail">
+            <img src="Projects/project3.jpg" alt="Project 3 Thumbnail">
             <div class="project-info">
                 <h3>Project 3</h3>
-                <p>Time: 2022</p>
+                <p>Time: 2024</p>
                 <p>This is project 3This is project 3This is project 3This is project 3This is project 3This is project 3</p>
-                <a href="Projects/project3/project3.jpg">Read More</a>
+                <a href="project3.html">Read More</a>
             </div>
         </div>
     </div>
