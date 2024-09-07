@@ -134,6 +134,7 @@
             display: flex;
             justify-content: center;
             gap: 15px; /* Reduced gap */
+            align-items: center; /* Align CV button with social icons */
         }
 
         .social-links a img {
@@ -147,15 +148,10 @@
         }
 
         /* Download CV Button */
-        .download-cv {
-            text-align: center;
-            margin-top: 20px; /* Adjust spacing as needed */
-        }
-
         .download-cv-button {
             display: inline-block;
             padding: 12px 24px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-decoration: none;
             color: #fff;
             background-color: #333;
@@ -167,6 +163,19 @@
         .download-cv-button:hover {
             background-color: #fff;
             color: #333;
+            border-color: #333;
+        }
+
+        /* Dark Mode Styles for Download CV Button */
+        .dark-mode .download-cv-button {
+            color: #333;
+            background-color: #fff;
+            border-color: #fff;
+        }
+
+        .dark-mode .download-cv-button:hover {
+            background-color: #333;
+            color: #fff;
             border-color: #333;
         }
 
@@ -248,9 +257,7 @@
             <a href="mailto:your.email@example.com"><img src="Home_img/email-icon.png" alt="Email"></a>
             <a href="https://www.instagram.com/yourprofile"><img src="Home_img/instagram-icon.png" alt="Instagram"></a>
             <a href="https://www.university.com"><img src="Home_img/university-icon.png" alt="University"></a>
-        </div>
-        <!-- Download CV Button -->
-        <div class="download-cv">
+            <!-- Download CV Button -->
             <a href="CV_joshi.pdf" target="_blank" class="download-cv-button">Download CV</a>
         </div>
     </section>
