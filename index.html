@@ -64,9 +64,6 @@
             font-size: 1.5em;
             cursor: pointer;
             color: #fff;
-            background: none;
-            border: none;
-            outline: none;
         }
 
         .dark-mode {
@@ -78,8 +75,13 @@
             background-color: #979797;
         }
 
-        .dark-mode .profile-photo {
-            border: 5px solid #fff;
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: auto;
+            padding: 20px 0;
+            background-color: #716e6e;
+            color: #fff;
         }
 
         header {
@@ -98,6 +100,7 @@
             width: 350px;
             height: 350px;
             object-fit: cover;
+            transition: border 0.3s;
         }
 
         .intro-text {
@@ -119,13 +122,6 @@
             padding: 0 20px;
             max-width: 1000px;
             text-align: justify;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-            margin-top: auto;
-            padding: 20px 0;
         }
 
         /* Social Links */
@@ -150,24 +146,12 @@
             filter: brightness(0.8);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-
-            .profile-photo {
-                width: 250px;
-                height: 250px;
-            }
-
-            .intro-text h1 {
-                font-size: 2.5em;
-            }
-
-            .intro-text p {
-                font-size: 1em;
-            }
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #fff;
         }
 
         @media (max-width: 480px) {
@@ -188,9 +172,6 @@
 
             .hamburger-menu {
                 display: block;
-                font-size: 1.5em;
-                color: #fff;
-                cursor: pointer;
                 position: absolute;
                 top: 10px;
                 right: 20px;
@@ -217,14 +198,14 @@
 </head>
 <body>
     <nav>
-        <div class="hamburger-menu" id="hamburger-menu">&#9776;</div> <!-- Hamburger menu icon -->
-        <ul id="nav-links">
+        <div class="hamburger-menu" id="hamburger-menu">&#9776;</div>
+        <ul class="nav-links">
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><button id="theme-toggle"><span>&#9790;</span></button></li> <!-- Moon symbol for dark mode -->
+            <li><a href="#" id="theme-toggle"><span>&#x263C;</span></a></li> <!-- Sun symbol for light mode -->
         </ul>
     </nav>
 
@@ -277,11 +258,8 @@
                 setTheme(prefersDarkScheme.matches);
             }
 
-            const hamburgerMenu = document.getElementById('hamburger-menu');
-            const navLinks = document.getElementById('nav-links');
-
-            hamburgerMenu.addEventListener('click', () => {
-                navLinks.classList.toggle('show');
+            document.getElementById('hamburger-menu').addEventListener('click', () => {
+                document.querySelector('nav ul').classList.toggle('show');
             });
         });
     </script>
